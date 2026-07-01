@@ -18,16 +18,16 @@ struct DetectResult {
     gap: f64,
     second: String,
 }
-const CC_MIN: f64 = 12.73;
-const CC_MAX: f64 = 24.32;
-const CV_MIN: f64 = 33.70;
-const CV_MAX: f64 = 45.96;
-const VC_MIN: f64 = 33.82;
-const VC_MAX: f64 = 40.99;
-const VV_MIN: f64 = 0.32;
-const VV_MAX: f64 = 11.35;
-const RATIO_MIN: f64 = 125.56;
-const RATIO_MAX: f64 = 168.14;
+const CC_MIN: f64 = 12.32;
+const CC_MAX: f64 = 24.10;
+const CV_MIN: f64 = 34.02;
+const CV_MAX: f64 = 46.15;
+const VC_MIN: f64 = 34.04;
+const VC_MAX: f64 = 41.20;
+const VV_MIN: f64 = 0.33;
+const VV_MAX: f64 = 11.43;
+const RATIO_MIN: f64 = 122.08;
+const RATIO_MAX: f64 = 164.29;
 
 fn is_vowel(a: char, vowels: &str, consonants: &str) -> bool {
     let lower = a.to_lowercase().next().unwrap_or(a);
@@ -139,34 +139,34 @@ fn main() {
         Language {
             name: "English".to_string(),
             cc: 23.70,
-            cv: 35.66,
+            cv: 35.67,
             vc: 35.16,
             vv: 5.36,
-            ratio: 164.39,
+            ratio: 164.29,
         },
         Language {
             name: "French".to_string(),
-            cc: 15.61,
-            cv: 39.22,
-            vc: 33.82,
-            vv: 11.35,
-            ratio: 125.56,
+            cc: 15.32,
+            cv: 39.35,
+            vc: 33.04,
+            vv: 11.43,
+            ratio: 122.08,
         },
         Language {
             name: "German".to_string(),
-            cc: 24.32,
-            cv: 33.70,
-            vc: 35.33,
-            vv: 6.65,
-            ratio: 168.14,
+            cc: 24.10,
+            cv: 34.02,
+            vc: 35.70,
+            vv: 6.40,
+            ratio: 164.10,
         },
         Language {
             name: "Turkish".to_string(),
-            cc: 12.73,
-            cv: 45.96,
-            vc: 40.99,
-            vv: 0.32,
-            ratio: 134.36,
+            cc: 12.32,
+            cv: 46.15,
+            vc: 41.20,
+            vv: 0.33,
+            ratio: 133.36,
         },
     ];
     let text =  match fs::read_to_string(&args[1]) {
